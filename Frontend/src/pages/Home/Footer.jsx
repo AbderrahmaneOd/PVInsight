@@ -1,88 +1,107 @@
 import React from "react";
-import { Footer, Label, TextInput } from "flowbite-react";
-import {
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsMailbox,
-  BsMailbox2,
-  BsTwitter,
-} from "react-icons/bs";
+import { TextInput } from "flowbite-react";
+import { BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
 import logo from "../../assets/logo.png";
 
 const MyFooter = () => {
   return (
-    <footer className="bg-neutralBlack text-white">
-      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto py-12">
-        <div className="grid w-full justify-between gap-8 sm:flex sm:items-start sm:justify-between md:flex md:grid-cols-1">
-          <div className="mt-2">
-            <a href="/" className="flex items-center">
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="h-11 w-auto"
-              />
+    <footer className="bg-gradient-to-br from-gray-900 to-black text-gray-300">
+      <div className="px-6 lg:px-16 max-w-screen-2xl mx-auto py-12">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+          {/* Logo and Social Links */}
+          <div className="sm:w-1/3">
+            <a href="/" className="flex items-center mb-6">
+              <div className="bg-white p-2 rounded-full">
+                <img src={logo} alt="Logo" className="h-10 w-auto" />
+              </div>
             </a>
-            <div className="my-8">
-              <p className="mb-1"> Copyright © 2024 PVInsight.</p>
-              <p>All rights reserved</p>
-            </div>
-
-            <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-start text-white">
-              <Footer.Icon href="#" icon={BsFacebook} className="text-white" />
-              <Footer.Icon href="#" icon={BsInstagram} className="text-white" />
-              <Footer.Icon href="#" icon={BsTwitter} className="text-white" />
-              <Footer.Icon href="#" icon={BsGithub} className="text-white" />
+            <p className="text-sm">
+              &copy; 2024 PVInsight. All rights reserved.
+            </p>
+            <div className="mt-4 flex space-x-4">
+              <a href="#" className="text-xl hover:text-gray-400">
+                <BsFacebook />
+              </a>
+              <a href="#" className="text-xl hover:text-gray-400">
+                <BsInstagram />
+              </a>
+              <a href="#" className="text-xl hover:text-gray-400">
+                <BsTwitter />
+              </a>
+              <a href="https://github.com/AbderrahmaneOd/PVInsight" className="text-xl hover:text-gray-400">
+                <BsGithub />
+              </a>
             </div>
           </div>
-          <div className="md:w-2/3 grid grid-cols-2 gap-8 items-start sm:mt-4 sm:grid-cols-3 sm:gap-6 text-white">
+
+          {/* Navigation and Newsletter */}
+          <div className="sm:w-2/3 flex flex-wrap justify-between gap-8 mt-8 sm:mt-0">
             <div>
-              <Footer.Title title="Company" className="text-white  pb-5" />
-              <Footer.LinkGroup col>
-                <Footer.Link href="#" className="text-white">
-                  About us
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Blog
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Contact us
-                </Footer.Link>
-              </Footer.LinkGroup>
+              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:underline">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
             </div>
             <div>
-              <Footer.Title title="Support" className="text-white pb-5" />
-              <Footer.LinkGroup col>
-                <Footer.Link href="#" className="text-white">
-                  Help center
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Terms of service
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Legal
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Privacy policy
-                </Footer.Link>
-                <Footer.Link href="#" className="text-white">
-                  Status
-                </Footer.Link>
-              </Footer.LinkGroup>
+              <h4 className="text-lg font-semibold mb-4">Support</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="hover:underline">
+                    Help center
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Terms of service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Privacy policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Status
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div>
-              <Footer.Title title="Stay up to date" className="text-white" />
-              <div className="max-w-md text-white">
-                <div className="mb-2 block"></div>
+            <div className="w-full sm:w-auto">
+              <h4 className="text-lg font-semibold mb-4">Stay up to date</h4>
+              <p className="text-sm mb-4">
+                Subscribe to our newsletter for the latest updates.
+              </p>
+              <form className="flex items-center">
                 <TextInput
-                  id="email4"
-                  placeholder="name@flowbite.com"
-                  required
-                  rightIcon={SiMinutemailer}
+                  id="newsletter"
+                  placeholder="Your email"
                   type="email"
+                  className="flex-grow"
+                  required
                 />
-              </div>
+                <button
+                  type="submit"
+                  className="ml-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500"
+                >
+                  <SiMinutemailer />
+                </button>
+              </form>
             </div>
           </div>
         </div>

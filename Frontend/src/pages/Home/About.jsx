@@ -39,7 +39,7 @@ const About = () => {
             </p>
             <Link to="/register">
               <button className="px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey block" style={{ marginLeft: '230px' }}>
-                LEARN MORE
+                Learn more
               </button>
             </Link>
           </motion.div>
