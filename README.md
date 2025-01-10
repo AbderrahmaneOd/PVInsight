@@ -110,6 +110,9 @@ cp .env.example .env
 # Install dependencies
 pip install -r requirements.txt
 
+# Initialize the database with default user accounts
+python ./app/init_db.py
+
 # Run Flask application
 flask run --reload
 ```
