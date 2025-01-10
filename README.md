@@ -1,11 +1,10 @@
 # PVInsight: A Novel Web-Based Platform for Streamlined Photovoltaic Power Prediction
-![Git](https://img.shields.io/badge/Git-000000?style=flat&logo=git&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-17.0-336791?style=flat&logo=mongodb&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-20.10.0-339933?style=flat&logo=node.js&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.0-38B2AC?style=flat&logo=tailwindcss&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-0.115.5-009688?style=flat&logo=flask&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.0.3-009688?style=flat&logo=flask&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-24.0%2B-2496ED?style=flat&logo=docker&logoColor=white)
 
 ![PVInsight Logo](assets/images/PVInsight_logo.png)
@@ -26,8 +25,8 @@ Designed with a user-friendly interface and leveraging cutting-edge technologies
 6. [Default User Accounts](#default-user-accounts)
 7. [Illustrative Examples](#illustrative-examples)
 8. [Video Demonstration](#video-demonstration)
-9. [Contributors](#contributors)
-10. [Future Enhancements](#future-enhancements)
+9. [Future Enhancements](#future-enhancements)
+10. [Contributors](#contributors)
 
 ## Project Structure
 
