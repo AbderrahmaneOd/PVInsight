@@ -20,13 +20,11 @@ Designed with a user-friendly interface and leveraging cutting-edge technologies
 1. [Project Structure](#project-structure)
 2. [System Architecture](#system-architecture)
 3. [Core Functionalities](#core-functionalities)
-4. [Deployment Options](#deployment-options)
-5. [Installation and Setup](#installation-and-setup)
-6. [Default User Accounts](#default-user-accounts)
-7. [Illustrative Examples](#illustrative-examples)
-8. [Video Demonstration](#video-demonstration)
-9. [Future Enhancements](#future-enhancements)
-10. [Contributors](#contributors)
+4. [Installation and Setup](#installation-and-setup)
+5. [Default User Accounts](#default-user-accounts)
+6. [Illustrative Examples](#illustrative-examples)
+7. [Video Demonstration](#video-demonstration)
+8. [Future Enhancements](#future-enhancements)
 
 ## Project Structure
 
