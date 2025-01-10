@@ -1,6 +1,5 @@
-import config from "../../../config.json";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from '../../../api/axios';
 import "./Users.css";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
@@ -14,7 +13,7 @@ const Users = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`${config.apiUrl}/users`, {
+      const res = await axios.get('/users', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -32,7 +31,7 @@ const Users = () => {
   const handleDelete = async (username) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`${config.apiUrl}/users/${username}`, {
+      await axios.delete(`/users/${username}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

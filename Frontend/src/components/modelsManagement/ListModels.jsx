@@ -1,6 +1,5 @@
-import config from "../../config.json";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from '../../api/axios';
 import "./ListModels.css";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -14,7 +13,7 @@ const ListModels = () => {
   const fetchModels = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`${config.apiUrl}/getAllModels`, {
+      const res = await axios.get('/getAllModels', {
         headers: {
           Authorization: `Bearer ${token}`
         }

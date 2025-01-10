@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ApexCharts from 'apexcharts';
-import config from "../../config.json";
+import axios from 'axios';
+
 const CpuChart = () => {
     const [cpuData, setCpuData] = useState({ labels: [], data: [] });
     const chartRef = useRef(null);
 
     useEffect(() => {
         const fetchCpuData = async () => {
-            const response = await fetch(`${config.apiUrl}/etat_cpu`);
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/etat_cpu`);
             const data = await response.json();
             setCpuData(formatData(data)); // Formatage des données CPU
         };

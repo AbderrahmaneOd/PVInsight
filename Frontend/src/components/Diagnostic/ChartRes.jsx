@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import config from "../../config.json";
 
 const ChartRes = () => {
   const [responseData, setResponseData] = useState(null);
@@ -22,7 +21,7 @@ const ChartRes = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${config.apiUrl}/response_statistics`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/response_statistics`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Utilisation du token dynamique

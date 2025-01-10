@@ -6,10 +6,10 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, OrdinalEncoder
 from ENSAJ_MultiOutliersDetection import  detect_outliers
+from app.db import MongoDB
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pfa']
+db = MongoDB.client['pfa']
 files_collection = db['files']
 
 @bp.route('/outliers', methods=['GET'])

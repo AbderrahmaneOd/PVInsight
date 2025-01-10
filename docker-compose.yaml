@@ -1,0 +1,35 @@
+services:
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_BASE_URL=http://localhost:5000
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://db:27017/
+    #command: ["flask", "run", "--host=0.0.0.0"]
+    command: ["bash", "-c", "python app/init_db.py && flask run --host=0.0.0.0"]
+    depends_on:
+      - db
+
+  db:
+    container_name: mongodb
+    image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - ./mongo-data:/data/db

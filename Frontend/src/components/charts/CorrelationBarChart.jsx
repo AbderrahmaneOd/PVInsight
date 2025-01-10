@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../../api/axios';
 import { Bar } from 'react-chartjs-2';
 
 const ChartComponent = () => {
@@ -12,7 +12,7 @@ const ChartComponent = () => {
         const fetchData = async () => {
             try {
 
-                const response = await axios.get('http://localhost:5000/correlation/bar');
+                const response = await axios.get('/correlation/bar');
                 const data = response.data;
 
                 setChartData({

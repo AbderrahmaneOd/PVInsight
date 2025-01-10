@@ -44,12 +44,18 @@ const Navbar = () => {
   ];
   return (
     <header className=" bg-white md:bg-transparent fixed top-0 left-0 right-0">
-      <nav className={`py-4 lg:px-14 px-4 ${
+      <nav className={`py-3 lg:px-14 px-4 ${
           isSticky ? "sticky top-0 right-0 left-0 border bg-white transition-all duration-300" : ""
         }`}>
         <div className="flex justify-between items-center text-base gap-8">
-          <a href="/" className="text-2xl font-semibold flex items-center space-x-3"><img src={logo} alt="" className="w-10 inline-block items-center"/><span>PVInsight</span></a>
-
+          {/* <a href="/" className="text-2xl font-semibold flex items-center space-x-3"><img src={logo} alt="" className="w-10 inline-block items-center"/><span>PVInsight</span></a> */}
+          <a href="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="Logo" 
+              className="h-11 w-auto"
+            />
+          </a>
           <ul className="md:flex space-x-12 hidden">
             
             {

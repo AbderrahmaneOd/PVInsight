@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../../api/axios';
 import ChartComponent from './UnivariateOutliers';
 
 const ChartWrapper = () => {
@@ -8,7 +8,7 @@ const ChartWrapper = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/outliers');
+                const response = await axios.get('/outliers');
                 const data = response.data;
                 //console.log(Object.values(data)[0]);
                 setChartData(data);

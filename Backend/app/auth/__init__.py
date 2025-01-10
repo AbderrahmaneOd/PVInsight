@@ -9,12 +9,11 @@ bp = Blueprint('auth', __name__)
 from flask import request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash
-from pymongo import MongoClient
+from app.db import MongoDB
 from datetime import datetime
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pfa']
+db = MongoDB.client['pfa']
 users_collection = db['users']
 server_data = db['server_data']
 

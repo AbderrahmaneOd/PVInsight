@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
+from app.db import MongoDB
 
 def create_app():
     app = Flask(__name__)
@@ -13,7 +14,8 @@ def create_app():
     # Initialize JWT manager
     jwt = JWTManager(app)
 
-    # Initialize Flask extensions here
+    # Initialize the MongoDB client
+    MongoDB.init_db()
 
     # Register blueprints here
     from app.auth import bp as auth_bp

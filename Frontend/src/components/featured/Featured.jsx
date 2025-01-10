@@ -3,10 +3,9 @@ import "./featured.scss";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import axios from "axios";
+import axios from '../../api/axios';
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
-import config from "../../config.json";
 
 const Featured = () => {
   const [rolePercentages, setRolePercentages] = useState(null);
@@ -27,7 +26,7 @@ const Featured = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${config.apiUrl}/users/percentage-by-role`, {
+      const response = await axios.get('/users/percentage-by-role', {
         headers: {
           Authorization: `Bearer ${token}` // Utilisation du token dynamique
         }

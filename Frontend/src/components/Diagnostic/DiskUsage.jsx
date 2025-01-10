@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
-import config from "../../config.json";
 
 function DiskUsage() {
   const [diskUsage, setDiskUsage] = useState(null);
@@ -23,7 +22,7 @@ function DiskUsage() {
 
   const fetchDiskUsage = async () => {
     try {
-      const response = await fetch(`${config.apiUrl}/disk_usage`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/disk_usage`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

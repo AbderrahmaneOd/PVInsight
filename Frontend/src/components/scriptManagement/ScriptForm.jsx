@@ -1,6 +1,5 @@
-import config from "../../config.json";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios from '../../api/axios';
 import "./ScriptForm.css";
 import { useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -19,7 +18,7 @@ const ScriptForm = () => {
       const fetchScript = async () => {
         try {
           const token = localStorage.getItem('token');
-          const { data } = await axios.get(`${config.apiUrl}/getScript?script=${scriptName}`, {
+          const { data } = await axios.get(`/getScript?script=${scriptName}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

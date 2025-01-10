@@ -1,0 +1,26 @@
+.git
+Dockerfile
+.DS_Store
+.gitignore
+.dockerignore
+
+/credentials
+/cache
+/store
+
+/node_modules
+npm-debug.log
+build
+
+# General
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/

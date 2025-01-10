@@ -20,14 +20,14 @@ const Registration = () => {
     e.preventDefault(); // Prevent the default form submission behavior
 
     // Get the values of password and confirm password fields
-    const passwordValue = password;
-    const confirmPasswordValue = e.target.elements['confirm-password'].value;
+    // const passwordValue = password;
+    // const confirmPasswordValue = e.target.elements['confirm-password'].value;
 
-    // Check if the passwords match
-    if (passwordValue !== confirmPasswordValue) {
-      setErrMsg('Passwords do not match');
-      return; // Stop the registration process if passwords do not match
-    }
+    // // Check if the passwords match
+    // if (passwordValue !== confirmPasswordValue) {
+    //   setErrMsg('Passwords do not match');
+    //   return; // Stop the registration process if passwords do not match
+    // }
 
     try {
       const response = await axios.post(REGISTER_URL,
@@ -189,7 +189,7 @@ const Registration = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700">
                 Confirm Password
               </label>
@@ -204,7 +204,7 @@ const Registration = () => {
                   placeholder="Confirm your password"
                 />
               </div>
-            </div>
+            </div> */}
 
             <div>
               <button

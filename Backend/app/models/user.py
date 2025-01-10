@@ -1,9 +1,8 @@
-from pymongo import MongoClient
+from app.db import MongoDB
 from bson.objectid import ObjectId
 from datetime import datetime
 
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pfa']
+db = MongoDB.client['pfa']
 users_collection = db['users']
 counters_collection = db['counters']
 

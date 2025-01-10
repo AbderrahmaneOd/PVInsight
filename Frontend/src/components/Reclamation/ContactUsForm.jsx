@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import config from "../../config.json";
 import './ContactUsForm.scss';
 function ContactUsForm() {
     const [nom, setNom] = useState("");
@@ -22,7 +21,7 @@ function ContactUsForm() {
         };
 
         try {
-            const response = await fetch(`${config.apiUrl}/send-email`, {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/send-email`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

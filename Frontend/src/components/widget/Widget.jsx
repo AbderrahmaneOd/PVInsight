@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from '../../api/axios';
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
@@ -12,7 +12,6 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import StorageIcon from '@mui/icons-material/Storage';
-import config from "../../config.json";
 
 import "./widget.scss";
 
@@ -27,7 +26,7 @@ const Widget = ({ type }) => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`${config.apiUrl}/request_stats`, {
+        const response = await axios.get('/request_stats', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -1,12 +1,11 @@
 from app.upload import bp
 from flask import request, jsonify, send_file, make_response
-from pymongo import MongoClient
+from app.db import MongoDB
 import pandas as pd
 import io
 
-# Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pfa']
+
+db = MongoDB.client['pfa']
 files_collection = db['files']
 
 

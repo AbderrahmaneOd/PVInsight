@@ -37,13 +37,13 @@ function App() {
           <Route path="/register" element={<>
             <Navbar />
             <Registration />
-            <Footer/>
+            {/* <Footer/> */}
           </>} />
           
           <Route path="/login" element={<>
             <Navbar />
             <Login />
-            <Footer/>
+            {/* <Footer/> */}
           </>
             
             

@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../../variants";
 
-
 const About = () => {
   return (
     <div>
@@ -28,18 +27,21 @@ const About = () => {
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
             className="md:w-3/5 mx-auto"
-            >
+          >
             <h2 className="text-4xl text-neutralDGrey font-semibold mb-4 md:w-4/5 text-justify">
-            Plateforme  Intégrée pour la Prédiction et la Visualisation de l'Énergie Solaire
+              Integrated Platform for Solar Energy Prediction and Visualization
             </h2>
             <p className="md:w-3/4 text-sm text-neutralGrey mb-8 text-justify">
-              Notre solution offre une plateforme intégrée permettant l'importation efficace des données, suivie d'un prétraitement avancé des données, réalisable en temps réel ou en mode hors ligne. Nous nous spécialisons dans la prédiction précise de l'énergie solaire, fournissant des analyses pertinentes et des visualisations percutantes pour faciliter la prise de décision. De plus, notre système génère automatiquement des rapports détaillés pour chaque opération, offrant une transparence et une traçabilité complètes tout au long du processus. Avec notre solution, optimisez vos opérations énergétiques avec confiance et efficacité.
+              Our solution offers an integrated platform enabling efficient data import, followed by advanced data preprocessing, achievable in real-time or offline. 
+              We specialize in precise solar energy prediction, providing relevant analyses and impactful visualizations to facilitate decision-making. 
+              Additionally, our system automatically generates detailed reports for each operation, offering complete transparency and traceability throughout the process. 
+              With our solution, optimize your energy operations confidently and efficiently.
             </p>
             <Link to="/register">
-                <button className="px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey block" style={{ marginLeft: '230px' }}>
-                EN SAVOIR +               
-                </button>
-              </Link>
+              <button className="px-7 py-2 bg-brandPrimary text-white rounded hover:bg-neutralDGrey block" style={{ marginLeft: '230px' }}>
+                LEARN MORE
+              </button>
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -50,11 +52,12 @@ const About = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
-        className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16">
+        className="px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver py-16"
+      >
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="md:w-1/2">
             <h2 className="text-4xl text-neutralDGrey font-semibold mb-2 md:w-2/3">
-            L'Allié Incontournable dans la   <br /> <span className="text-brandPrimary">Révolution Énergétique</span>
+              The Essential Ally in the <br /> <span className="text-brandPrimary">Energy Revolution</span>
             </h2>
           </div>
 
@@ -65,37 +68,36 @@ const About = () => {
                 <img src="/src/assets/icons/group.png" alt="" />
                 <div>
                   <h4 className="text-2xl text-neutralDGrey font-semibold">4</h4>
-                  <p>Chercheurs</p>
+                  <p>Researchers</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-              <img src="/src/assets/icons/developpement-web.png" alt="" width="60" height="60" />
+                <img src="/src/assets/icons/developpement-web.png" alt="" width="60" height="60" />
                 <div>
                   <h4 className="text-2xl text-neutralDGrey font-semibold">3</h4>
-                  <p>Développeurs</p>
+                  <p>Developers</p>
                 </div>
               </div>
             </div>
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-              <img src="/src/assets/icons/ai.png" alt="" width="50" height="50" />
+                <img src="/src/assets/icons/ai.png" alt="" width="50" height="50" />
                 <div>
                   <h4 className="text-2xl text-neutralDGrey font-semibold">9</h4>
-                  <p>Mdèles d'intelligence artificielle</p>
+                  <p>AI Models</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-              <img src="/src/assets/icons/panneaux-solaires.png" alt="" width="50" height="50" />
+                <img src="/src/assets/icons/panneaux-solaires.png" alt="" width="50" height="50" />
                 <div>
                   <h4 className="text-2xl text-neutralDGrey font-semibold">22</h4>
-                  <p>Panneaux solaires</p>
+                  <p>Solar Panels</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </motion.div>
-
     </div>
   );
 };

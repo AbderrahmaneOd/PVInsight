@@ -17,16 +17,12 @@ const MyFooter = () => {
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto py-12">
         <div className="grid w-full justify-between gap-8 sm:flex sm:items-start sm:justify-between md:flex md:grid-cols-1">
           <div className="mt-2">
-            <a
-              href=""
-              className="text-2xl font-semibold flex items-center space-x-3"
-            >
-              <img
-                src={logo}
-                alt=""
-                className="w-10 inline-block items-center"
+            <a href="/" className="flex items-center">
+              <img 
+                src={logo} 
+                alt="Logo" 
+                className="h-11 w-auto"
               />
-              <span>PVInsight</span>
             </a>
             <div className="my-8">
               <p className="mb-1"> Copyright © 2024 PVInsight.</p>

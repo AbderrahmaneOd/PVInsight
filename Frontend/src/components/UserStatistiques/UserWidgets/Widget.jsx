@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from '../../../api/axios';
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import "./widget.scss";
-import config from "../../../config.json";
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import FunctionsIcon from '@mui/icons-material/Functions';
@@ -16,7 +15,7 @@ const Widget = ({ type }) => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`${config.apiUrl}/users/count-by-role`, {
+        const response = await axios.get('/users/count-by-role', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

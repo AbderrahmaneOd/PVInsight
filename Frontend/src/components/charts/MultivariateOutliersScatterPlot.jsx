@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../../api/axios';
 import Plot from 'react-plotly.js';
 
 const MultivariateOutliers = () => {
@@ -12,7 +12,7 @@ const MultivariateOutliers = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/multivariate/outliers');
+            const response = await axios.get('/multivariate/outliers');
             const responseData = response.data;
 
             // console.log(responseData.inliers_x)

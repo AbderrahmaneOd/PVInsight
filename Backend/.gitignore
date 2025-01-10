@@ -5,3 +5,5 @@ __pycache__/
 
 # Compiled Python files
 *.pyc
+
+.env

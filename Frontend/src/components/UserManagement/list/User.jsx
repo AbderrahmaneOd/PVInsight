@@ -1,6 +1,5 @@
-import config from "../../../config.json";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from '../../../api/axios';
 import "./User.css";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -22,7 +21,7 @@ const User = () => {
       const fetchUser = async () => {
         try {
           const token = localStorage.getItem('token'); // Récupérer le token d'authentification depuis le localStorage
-          const { data } = await axios.get(`${config.apiUrl}/users/${username}`, {
+          const { data } = await axios.get(`/users/${username}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -59,13 +58,13 @@ const User = () => {
     try {
       const token = localStorage.getItem('token'); // Récupérer le token d'authentification depuis le localStorage
       if (username === "new") {
-        await axios.post(`${config.apiUrl}/users`, user, {
+        await axios.post(`/users`, user, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
       } else {
-        await axios.put(`${config.apiUrl}/users/${username}`, user, {
+        await axios.put(`/users/${username}`, user, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -1,14 +1,13 @@
 from app.auth import bp
 from flask import jsonify, request
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity,unset_jwt_cookies
-from pymongo import MongoClient
+from app.db import MongoDB
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.models.user import User
 from datetime import datetime, timedelta
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pfa']
+db = MongoDB.client['pfa']
 users_collection = db['users']
 
 @bp.route('/register', methods=['POST'])

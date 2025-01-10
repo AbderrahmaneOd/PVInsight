@@ -1,6 +1,5 @@
-import config from "../../config.json";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios from '../../api/axios';
 import "./ModelForm.css";
 import { useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -21,7 +20,7 @@ const ModelForm = () => {
       const fetchModel = async () => {
         try {
           const token = localStorage.getItem('token');
-          const { data } = await axios.get(`${config.apiUrl}/getModel?modele=${modelName}`, {
+          const { data } = await axios.get(`/getModel?modele=${modelName}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import config from "../../config.json";
 
 const PieChart = () => {
   const [requestData, setRequestData] = useState(null);
@@ -22,7 +21,7 @@ const PieChart = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${config.apiUrl}/request_stats`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/request_stats`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Utilisation du token dynamique

@@ -1,6 +1,5 @@
-import config from "../../config.json";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from '../../api/axios';
 import "./ListScripts.css";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -12,7 +11,7 @@ const ListScripts = () => {
 
   const fetchScripts = async () => {
     try {
-      const res = await axios.get(`${config.apiUrl}/getAllScripts`);
+      const res = await axios.get('/getAllScripts');
       setScripts(res.data);
     } catch (error) {
       console.error("Error fetching scripts:", error);

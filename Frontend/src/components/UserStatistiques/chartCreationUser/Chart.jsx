@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AreaChart, Area, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import "./chart.scss";
-import config from "../../../config.json";
 
 const Chart = ({ aspect, title }) => {
   const [data, setData] = useState([]);
@@ -22,7 +21,7 @@ const Chart = ({ aspect, title }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${config.apiUrl}/count-by-creation-date`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/count-by-creation-date`, {
         headers: {
           Authorization: `Bearer ${token}` // Utilisation du token dynamique
         }

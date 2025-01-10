@@ -1,13 +1,12 @@
 from app.prediction import bp
 from flask import request, jsonify
-from pymongo import MongoClient
+from app.db import MongoDB
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
 
 # Connect to MongoDB
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pfa']
+db = MongoDB.client['pfa']
 files_collection = db['files']
 
 

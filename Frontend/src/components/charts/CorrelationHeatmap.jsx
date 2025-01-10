@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../../api/axios';
 import Plot from 'react-plotly.js';
 
 const CorrelationHeatmap = () => {
@@ -11,7 +11,7 @@ const CorrelationHeatmap = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/correlation');
+            const response = await axios.get('/correlation');
             setCorrelationData(response.data);
 
             //const responseData = JSON.parse(response.data);

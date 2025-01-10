@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ApexCharts from 'apexcharts';
-import config from "../../config.json";
 const MemoryChart = () => {
     const [memoryData, setMemoryData] = useState({ labels: [], data: [] });
     const chartRef = useRef(null);
 
     useEffect(() => {
         const fetchMemoryData = async () => {
-            const response = await fetch(`${config.apiUrl}/etat_memory`);
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL}/etat_memory`);
             const data = await response.json();
             setMemoryData(formatData(data)); // Formatage des données de mémoire
         };
